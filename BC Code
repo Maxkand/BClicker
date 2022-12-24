@@ -1,0 +1,78 @@
+Let's make a game!
+  name:Booba Clicker
+  by:Maxkand
+  desc:This is a tiny game about making the most booba possible. (pls don't ban me Orteil)
+  created:24/12/2022
+  updated:24/12/2022
+  version:1
+
+Settings
+  tiling background:https://i.ibb.co/Lt4gNJz/Group-7-encore.jpg
+
+  CSS
+    .thing
+    {
+      border-radius:8px;
+      background:rgba(255,255,255,0.5);
+    }
+
+    #game.filtersOn .thing.cantAfford.notOwned
+    {
+      filter:blur(3px);
+    }
+
+Layout
+  use default
+
+Buttons
+  *boobaButton
+    name:Are theese boobas ?!
+    desc:Click it. I know you want to.
+    on click:anim icon wobble
+    on click:yield 1 booba
+    icon:https://i.ibb.co/hMzLnPM/booba-vector-square-0-5.png
+    no text
+    class:bigButton hasFlares
+    icon class:shadowed
+    tooltip origin:bottom
+    tooltip class:red
+
+Resources
+  *booba|boobas
+    name:Booba|Boobas
+    desc:These are your boobas. You can use them to purchase things that make more boobas.
+    icon:https://i.ibb.co/DDdWR2W/booba-1.png
+    class:noBackground
+    show earned
+
+Buildings
+  *woman|women
+    name:Woman|Women
+    desc:They have boobas. For the rest idk.
+    icon:https://i.ibb.co/hLMgnLf/woman-icon-48.png
+    cost:15 boobas
+    on tick:yield 0.1 booba
+    unlocked
+
+Upgrades
+  *petite
+    name:Petite Women
+    desc:They have little boobas. Better than nothing right ?
+    icon:https://i.ibb.co/8zvf41P/petite-woman.png
+    cost:100 boobas
+    req:10 woman
+
+  *muscular
+    name:Muscular Women
+    desc:They don't always make the best boobas but man they are jacked !
+    icon:https://i.ibb.co/RzmBD3D/muscular-woman.png
+    cost:200 boobas
+    passive:multiply yield of woman by 2
+    req:25 woman
+
+  *tattooed
+    name:Tattooed Women
+    desc:Usualy strong women. Not always big boobs but tattoos are cool right ?
+    icon:https://i.ibb.co/nmfsjqT/tattooed-woman.png
+    cost:400 boobas
+    req:50 woman
